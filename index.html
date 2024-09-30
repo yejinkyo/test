@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  </head>
+<body>
+    <!--gif 이미지와 제목을 포함하는 컨테이너-->
+    <div class="gif_contianer">
+      <div>
+        <h1 class = "header_text">나 사랑해?</h1>
+      </div>
+      <div class="gif_container">
+        <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTdmM2l0MWd4aTV2ODdrd213eWxqN2ZjM3ptcWEyanljdWtlb3BjMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Y70rT1B5XZtkvYB9q9/200w.webp">
+      </div>
+      <div class = "buttons">
+        <button class="btn" id="yesButton" onclick="nextPage()">응</button>
+        <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">아니</button>
+        <script>
+          function nextPage() {
+            window.location.href="yes.html";
+          }
+          function moveButton() {
+            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
+            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
+            document.getElementById('noButton').style.left = `${x}px`;
+            document.getElementById('noButton').style.top = `${y}px`
+          }
+        </script>
+      </div>
+    </div>
+
+    <footer>
+      <p>@yejinkyo</p>
+    </footer>
+</body>
+</html>
